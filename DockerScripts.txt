@@ -1,0 +1,15 @@
+docker volume
+
+docker volume create redisvolume
+
+redis
+
+docker run -p 6379:6379 --name redis-data -d -v redisvolume:/data redis --appendonly yes
+
+kibana
+
+btpnmac$ docker run --name kibana-550 -e ELASTICSEARCH_URL=http://10.1.91.10:9200 -p 5603:5601 -d kibana:5.5.0
+
+ssh
+
+-o PreferredAuthentications=password
